@@ -1,19 +1,17 @@
 import React from "react";
 import Header from "./header";
 
-function app() {
-
+function App() {
     return (
       <>
         <Header />
         <div className="buttonContainer">
           <button></button>
         </div>
-        <docuContainer />
       </>
     );
   }
 
 
 
-export default app;
+export default App;

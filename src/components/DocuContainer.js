@@ -3,4 +3,4 @@ import DocuCards from "./DocuCards";
 
 
 
-export default docuContainer;
+export default DocuContainer;
