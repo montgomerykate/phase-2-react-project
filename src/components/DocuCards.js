@@ -1,25 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 
 function DocuCards() {
-    const { id, title, comment, rating, where, image } = docsInfo;
+    const { id, title, comment, rating, where, image } = DocuInfo;
 
-    function renderInfo() {
-      fetch(`http://localhost:3001/natureDocs/`)
-        .then(res => res.json())
-        .then(info => loadInfo(info));
-    }
+   
 
   return (
     <div className="card">
-      <h2>{""}</h2>
+      <h2>{title}</h2>
       <img
-        src={""}
-        alt={""}
+        src={image}
+        alt={title}
         className=""
       />
-      <p>{""} Likes </p>
+      <p>Rating: {rating} </p>
+      <p>Where to find it: {where}</p>
+      <p>Description: {comment} </p>
       <button className="like-btn"></button>
-      <button className="del-btn"></button>
     </div>
   );
   }
