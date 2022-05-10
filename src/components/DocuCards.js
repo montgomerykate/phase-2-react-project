@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
-function DocuCards() {
-    const { id, title, comment, rating, where, image } = DocuInfo;
+function DocuCards({ documentaries }) {
+    const { id, title, comment, rating, where, image } = documentaries;
 
    
 
