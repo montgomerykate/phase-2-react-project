@@ -5,7 +5,7 @@ import search from "../src/search";
 function DocuContainer() {
 const [docuArr, setDocuArr] = useState([]);
 useEffect(() => {
-    fetch("http://localhost:3000/natureDocs")
+    fetch("http://localhost:3001/natureDocs")
     .then(res => res.json())
     .then(setDocuArr)
 }, [])
