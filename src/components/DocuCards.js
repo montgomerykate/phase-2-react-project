@@ -26,8 +26,9 @@ function DocuCards({ docInfo }
           </button>
         )}
         <strong>{docInfo.title}</strong>
-        <span>Where to watch: {docInfo.where}</span>
-        <span>About: {docInfo.comment}</span>
+        <p>Rating: {docInfo.rating}</p>
+        <p>Where to watch: {docInfo.where}</p>
+        <p>About: {docInfo.comment}</p>
       </div>
     </li>
   );
