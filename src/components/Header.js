@@ -1,5 +1,6 @@
 import React from "react";
 import Search from "./Search";
+import {Link} from "react-router-dom"
 
 function Header({ search, handleSearch }) {
   return (
@@ -8,6 +9,7 @@ function Header({ search, handleSearch }) {
         NatureTube
       </h1>
       <Search search={search} handleSearch={handleSearch}/>
+      
     </header>
   );
 }
