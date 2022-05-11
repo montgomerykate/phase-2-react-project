@@ -7,26 +7,20 @@ function App() {
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:6001/listings")
-      .then((r) => r.json())
-      .then(setListings);
+    fetch("http://localhost:3001/natureDocs")
+      .then(r => r.json())
+      .then(data => setListings(data))
   }, []);
 
-  function handleRemoveListing(id) {
-    const newListings = listings.filter((listing) => listing.id !== id);
-    setListings(newListings);
-  }
-
-  const displayedListings = listings.filter((listing) =>
-    listing.description.toLowerCase().includes(search.toLowerCase())
-  );
+  // const displayedListings = listings.filter((listing) => {
+  //  return listing.description.toLowerCase().includes(search.toLowerCase())}
+  // );
 
   return (
     <div className="app">
       <Header onSearch={setSearch} />
       <DocuContainer
-        listings={displayedListings}
-        onRemoveListing={handleRemoveListing}
+        natureDocs={listings}
       />
     </div>
   );

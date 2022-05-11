@@ -1,7 +1,7 @@
 import React from "react";
 import DocuCards from "./DocuCards";
 
-function DocuContainer({ natureDocs, onRemoveListing }) {
+function DocuContainer({ natureDocs }) {
   return (
     <main>
       <ul className="cards">
@@ -9,7 +9,6 @@ function DocuContainer({ natureDocs, onRemoveListing }) {
           <DocuCards
             key={docInfo.id}
             docInfo={docInfo}
-            onRemoveListing={onRemoveListing}
           />
         ))}
       </ul>

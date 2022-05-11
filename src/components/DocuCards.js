@@ -1,23 +1,13 @@
 import React, { useState } from "react";
 
-function DocuCard({
-  docInfo: { id, image, title, comment, where },
-  onRemoveListing,
-}) {
+function DocuCards({ docInfo }
+) {
   const [favorite, setFavorite] = useState(false);
-
-  function handleDeleteClick() {
-    fetch(`http://localhost:3001/natureDocs/${id}`, {
-      method: "DELETE",
-    });
-    onRemoveDocInfo(id);
-  }
 
   return (
     <li className="card">
       <div className="image">
-        <span className="price">$0</span>
-        <img src={image} alt={comment} />
+        <img src={docInfo.image} alt={docInfo.comment} />
       </div>
       <div className="details">
         {favorite ? (
@@ -35,15 +25,12 @@ function DocuCard({
             ☆
           </button>
         )}
-        <strong>{title}</strong>
-        <span>Where to watch: {where}</span>
-        <span>About: {comment}</span>
-        <button onClick={handleDeleteClick} className="emoji-button delete">
-          🗑
-        </button>
+        <strong>{docInfo.title}</strong>
+        <span>Where to watch: {docInfo.where}</span>
+        <span>About: {docInfo.comment}</span>
       </div>
     </li>
   );
 }
 
-export default DocuCard;
+export default DocuCards;
