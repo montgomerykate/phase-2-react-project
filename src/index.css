@@ -7,6 +7,7 @@
   body {
     font-family: sans-serif;
     font-size: 14px;
+    background-color: #1d2c69;
   }
   
   header {
@@ -20,7 +21,7 @@
   
   header h1 {
     line-height: 1;
-    font-family: serif;
+    font-family: serif bold;
   }
   
   .logo {
@@ -68,20 +69,14 @@
   
   .emoji-button.favorite{
     color: transparent;
-    text-shadow: 0 0 0 gray;
+    text-shadow: 0 0 0 gold;
   }
   
   .emoji-button.favorite.active,
   .emoji-button.favorite:hover {
-    text-shadow: 0 0 0 green;
+    text-shadow: 0 0 0 gold;
     cursor: pointer;
   }
-  
-  .emoji-button.delete:hover {
-    text-shadow: 0 0 0 firebrick;
-    cursor: pointer;
-  }
-  
   .cards {
     list-style: none;
     display: flex;
@@ -90,10 +85,10 @@
   
   .card {
     margin: 1rem;
-    box-shadow: 0 0 7px 0 #ddd;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    
     width: 300px;
+    background-color: #568c56;
   }
   
   .card .image {
@@ -103,18 +98,6 @@
     display: flex;
     justify-content: center;
   }
-  
-  .card .image .price {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 0.25rem;
-    border-right: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-    border-bottom-right-radius: 5px;
-    background: white;
-  }
-  
   .card .image img {
     max-width: 300px;
     max-height: 225px;
