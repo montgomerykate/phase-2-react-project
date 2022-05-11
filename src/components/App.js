@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "./Header";
 import DocuContainer from "./DocuContainer";
+import {Route, Switch, Link} from "react-router-dom"
 
 function App() {
   const [listings, setListings] = useState([]);
@@ -22,6 +23,7 @@ function App() {
   return (
     <div className="app">
       <Header search={search} handleSearch={handleSearch} />
+      
       <DocuContainer
         natureDocs={displayedListings}
       />
