@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "./Header";
 import DocuContainer from "./DocuContainer";
+import {Route, Switch} from "react-router-dom"
 
 function App() {
   const [listings, setListings] = useState([]);
@@ -17,12 +18,24 @@ function App() {
   // );
 
   return (
-    <div className="app">
-      <Header onSearch={setSearch} />
-      <DocuContainer
-        natureDocs={listings}
-      />
-    </div>
+  
+      
+  <div className="app">
+    <Header onSearch={setSearch} />
+  
+   <Switch>
+    <Route exact path= "/listings">
+    <DocuContainer natureDocs={listings} />
+    </Route>
+    
+    </Switch>
+   
+
+  </div> 
+  
+   
+  
+    
   );
 }
 

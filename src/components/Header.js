@@ -8,6 +8,7 @@ function Header({ onSearch }) {
         NatureTube
       </h1>
       <Search onSearch={onSearch} />
+      <nav><></></nav>
     </header>
   );
 }
