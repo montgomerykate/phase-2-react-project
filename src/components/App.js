@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Header from "./Header";
-import ListingsContainer from "./DocuContainer";
+import DocuContainer from "./DocuContainer";
 
 function App() {
   const [listings, setListings] = useState([]);
@@ -24,7 +24,7 @@ function App() {
   return (
     <div className="app">
       <Header onSearch={setSearch} />
-      <ListingsContainer
+      <DocuContainer
         listings={displayedListings}
         onRemoveListing={handleRemoveListing}
       />

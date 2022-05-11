@@ -7,7 +7,7 @@ function DocuCard({
   const [favorite, setFavorite] = useState(false);
 
   function handleDeleteClick() {
-    fetch(`http://localhost:3001/listings/${id}`, {
+    fetch(`http://localhost:3001/natureDocs/${id}`, {
       method: "DELETE",
     });
     onRemoveDocInfo(id);
@@ -17,7 +17,7 @@ function DocuCard({
     <li className="card">
       <div className="image">
         <span className="price">$0</span>
-        <img src={image} alt={description} />
+        <img src={image} alt={comment} />
       </div>
       <div className="details">
         {favorite ? (
