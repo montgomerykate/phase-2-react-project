@@ -12,15 +12,18 @@ function App() {
       .then(data => setListings(data))
   }, []);
 
-  // const displayedListings = listings.filter((listing) => {
-  //  return listing.description.toLowerCase().includes(search.toLowerCase())}
-  // );
+  const handleSearch = (e) => {
+    setSearch(e.target.value)
+  }
+
+   const displayedListings = listings.filter(listing => listing.title.toLowerCase().includes(search.toLowerCase())
+   );
 
   return (
     <div className="app">
-      <Header onSearch={setSearch} />
+      <Header search={search} handleSearch={handleSearch} />
       <DocuContainer
-        natureDocs={listings}
+        natureDocs={displayedListings}
       />
     </div>
   );
