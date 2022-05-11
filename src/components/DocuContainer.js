@@ -1,28 +1,20 @@
-import React, { useState, useEffect } from "react";
-import search from "../src/search";
+import React from "react";
+import DocuCards from "./DocuCards";
 
-
-function DocuContainer() {
-const [docuArr, setDocuArr] = useState([]);
-useEffect(() => {
-    fetch("http://localhost:3001/natureDocs")
-    .then(res => res.json())
-    .then(setDocuArr)
-}, [])
-
-
-
-    return (
-        <main>
-            <MyList docuArr = {docuArr} />
-            <Search />
-        </main>
-    );
+function DocuContainer({ natureDocs, onRemoveListing }) {
+  return (
+    <main>
+      <ul className="cards">
+        {natureDocs.map((docInfo) => (
+          <DocuCards
+            key={docInfo.id}
+            docInfo={docInfo}
+            onRemoveListing={onRemoveListing}
+          />
+        ))}
+      </ul>
+    </main>
+  );
 }
-
-
-
-
-
 
 export default DocuContainer;
