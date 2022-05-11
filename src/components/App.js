@@ -13,29 +13,20 @@ function App() {
       .then(data => setListings(data))
   }, []);
 
-  // const displayedListings = listings.filter((listing) => {
-  //  return listing.description.toLowerCase().includes(search.toLowerCase())}
-  // );
+  const handleSearch = (e) => {
+    setSearch(e.target.value)
+  }
+
+   const displayedListings = listings.filter(listing => listing.title.toLowerCase().includes(search.toLowerCase())
+   );
 
   return (
-  
-      
-  <div className="app">
-    <Header onSearch={setSearch} />
-  
-   <Switch>
-    <Route exact path= "/listings">
-    <DocuContainer natureDocs={listings} />
-    </Route>
-    
-    </Switch>
-   
-
-  </div> 
-  
-   
-  
-    
+    <div className="app">
+      <Header search={search} handleSearch={handleSearch} />
+      <DocuContainer
+        natureDocs={displayedListings}
+      />
+    </div>
   );
 }
 

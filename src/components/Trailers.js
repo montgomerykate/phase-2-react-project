@@ -14,6 +14,4 @@ const YoutubeImbed = ({ embedId }) => (
     </div>
 );
 
-
-
 export default Trailers;
