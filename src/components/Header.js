@@ -17,10 +17,7 @@ function Header({ onSearch }) {
   return (
     <header>
       <h1>
-        <span className="logo" role="img">
-          ☮
-        </span>
-        gregslist
+        NatureTube
       </h1>
       <Search onSearch={onSearch} />
     </header>

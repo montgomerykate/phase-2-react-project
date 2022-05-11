@@ -1,32 +1,26 @@
 import React, { useEffect, useState } from "react";
 import Header from "./Header";
-import ListingsContainer from "./DocuContainer";
+import DocuContainer from "./DocuContainer";
 
 function App() {
   const [listings, setListings] = useState([]);
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:6001/listings")
-      .then((r) => r.json())
-      .then(setListings);
+    fetch("http://localhost:3001/natureDocs")
+      .then(r => r.json())
+      .then(data => setListings(data))
   }, []);
 
-  function handleRemoveListing(id) {
-    const newListings = listings.filter((listing) => listing.id !== id);
-    setListings(newListings);
-  }
-
-  const displayedListings = listings.filter((listing) =>
-    listing.description.toLowerCase().includes(search.toLowerCase())
-  );
+  //const displayedListings = listings.filter((listing) => {
+   // return listing.description.toLowerCase().includes(search.toLowerCase())}
+  //);
 
   return (
     <div className="app">
       <Header onSearch={setSearch} />
-      <ListingsContainer
-        listings={displayedListings}
-        onRemoveListing={handleRemoveListing}
+      <DocuContainer
+        natureDocs={listings}
       />
     </div>
   );
