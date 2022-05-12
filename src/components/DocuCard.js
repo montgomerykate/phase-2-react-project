@@ -1,13 +1,16 @@
 import React, { useState } from "react";
+import {Link} from "react-router-dom"
 
-function DocuCards({ docInfo }
+function DocuCard({ docInfo, embedId }
 ) {
   const [favorite, setFavorite] = useState(false);
 
   return (
     <li className="card">
       <div className="image">
+        <Link to={`/youtube/${embedId}`}>
         <img src={docInfo.image} alt={docInfo.comment} />
+        </Link>
       </div>
       <div className="details">
         {favorite ? (
@@ -33,5 +36,4 @@ function DocuCards({ docInfo }
     </li>
   );
 }
-
-export default DocuCards;
+export default DocuCard;

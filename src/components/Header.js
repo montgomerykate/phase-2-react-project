@@ -9,7 +9,22 @@ function Header({ search, handleSearch }) {
         NatureTube
       </h1>
       <Search search={search} handleSearch={handleSearch}/>
-      
+      <nav>
+        <ul>
+          <li>
+            <Link to= "/">Home</Link>
+            </li>
+
+            <li>
+            <Link to="/trailers">Trailers</Link>
+            </li>
+
+            <li>
+            <Link to="/trailers">Trailers</Link>
+            </li>
+        </ul>
+
+      </nav>
     </header>
   );
 }
