@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "./Header";
 import DocuContainer from "./DocuContainer";
 import {Route, Switch, Link} from "react-router-dom"
+import Trailer from "./Trailer"
 
 function App() {
   const [listings, setListings] = useState([]);
@@ -21,13 +22,25 @@ function App() {
    );
 
   return (
+    <>
+    <Header search={search} handleSearch={handleSearch} />
+    <Switch>
     <div className="app">
-      <Header search={search} handleSearch={handleSearch} />
       
+      <Route exact path="/">
       <DocuContainer
         natureDocs={displayedListings}
       />
+      </Route>
+
+      <Route  path='/youtube/:embedId'> 
+      <Trailer />
+      </Route>
+      
+    
     </div>
+    </Switch>
+    </>
   );
 }
 
