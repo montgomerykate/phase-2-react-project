@@ -6,7 +6,9 @@ function Header({ search, handleSearch }) {
   return (
     <header>
       <h1>
+      <main>
         NEATureTube: 
+      <main>
       </h1>
       <h2> How neat is that?</h2>
       <Search search={search} handleSearch={handleSearch}/>
