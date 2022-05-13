@@ -28,10 +28,10 @@ function DocuCard({ docInfo, embedId }
             ☆
           </button>
         )}
-        <strong>{docInfo.title}</strong>
-        <p>Rating: {docInfo.rating}</p>
-        <p>Where to watch: {docInfo.where}</p>
-        <p>About: {docInfo.comment}</p>
+        <strong><b>{docInfo.title}</b></strong>
+        <p><b>Rating:</b> {docInfo.rating}</p>
+        <p><b>Where to watch:</b> {docInfo.where}</p>
+        <p><b>About:</b> {docInfo.comment}</p>
       </div>
     </li>
   );
