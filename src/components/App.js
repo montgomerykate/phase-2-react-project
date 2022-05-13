@@ -21,13 +21,21 @@ function App() {
    );
 
   return (
+    <>
+    <Header search={search} handleSearch={handleSearch} />
+    <Switch>
     <div className="app">
-      <Header search={search} handleSearch={handleSearch} />
-      
+      <Route exact path="/">
       <DocuContainer
         natureDocs={displayedListings}
       />
+      </Route>
+      <Route exact path='/youtube/:embedId'>
+      <h2>Other Route</h2>
+      </Route>
     </div>
+    </Switch>
+    </>
   );
 }
 
