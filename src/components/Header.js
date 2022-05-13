@@ -6,7 +6,7 @@ function Header({ search, handleSearch }) {
   return (
     <header>
       <h1>
-        NatureTube
+        NeatureTube
       </h1>
       <Search search={search} handleSearch={handleSearch}/>
       <nav>
