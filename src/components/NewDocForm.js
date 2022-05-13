@@ -84,7 +84,7 @@ const NewDocForm = ({addNewDoc}) => {
       </div>
       <></>
       <button className="ui button" type="submit">
-        Add To Library
+        That's pretty neat!
       </button>
     </form>
   </div>

@@ -8,7 +8,7 @@ function Header({ search, handleSearch }) {
       <h1>
         NEATureTube: 
       </h1>
-      <h2> How neat is that</h2>
+      <h2> How neat is that?</h2>
       <Search search={search} handleSearch={handleSearch}/>
       <nav>
         <ul>
