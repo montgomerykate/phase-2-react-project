@@ -39,7 +39,7 @@ const NewDocForm = ({addNewDoc}) => {
 
     return (
     <div className="ui segment">
-    <form onSubmit={handleSubmit} className="ui form">
+    <form id="form" onSubmit={handleSubmit} className="ui form">
       <div className="inline fields">
         <input
           type="text"

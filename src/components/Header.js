@@ -14,11 +14,7 @@ function Header({ search, handleSearch }) {
           <li>
             <Link to= "/">Home</Link>
             </li>
-
-            <li>
-            <Link to="/trailers">Trailers</Link>
-            </li>
-
+            
             <li>
             <Link to="/newdocform">Add Documentary</Link>
             </li>
