@@ -3,6 +3,7 @@ import Header from "./Header";
 import DocuContainer from "./DocuContainer";
 import {Route, Switch, Link} from "react-router-dom"
 import Trailer from "./Trailer"
+import NewDocForm from "./NewDocForm";
 
 function App() {
   const [listings, setListings] = useState([]);
@@ -18,6 +19,10 @@ function App() {
     setSearch(e.target.value)
   }
 
+  const addNewDoc = (newDoc) => {
+    setListings([...listings, newDoc])
+  }
+
    const displayedListings = listings.filter(listing => listing.title.toLowerCase().includes(search.toLowerCase())
    );
 
@@ -26,6 +31,9 @@ function App() {
     <Header search={search} handleSearch={handleSearch} />
     <Switch>
     <div className="app">
+    <Route path='/newdocform'>
+      <NewDocForm addNewDoc={addNewDoc}/>
+    </Route>
       
       <Route exact path="/">
       <DocuContainer

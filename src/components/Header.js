@@ -20,7 +20,7 @@ function Header({ search, handleSearch }) {
             </li>
 
             <li>
-            <Link to="/trailers">Trailers</Link>
+            <Link to="/newdocform">Add Documentary</Link>
             </li>
         </ul>
 
